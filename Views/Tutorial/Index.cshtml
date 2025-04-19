@@ -1,0 +1,49 @@
+﻿@* whenever we write some C# code here we use @ at he beggining *@
+
+@*<h1> Hi from the Tutorial View</h1>*@ 
+
+@{
+    var tutorials = ViewData["tutorials"] as List<BasicMVC.Models.Tutorial> ;// we fetch the same data we stored inside the controller using ViewData
+                                                                             // Note
+                                                                             // string data - no need of type casting
+                                                                             // other data - there is need of type casting
+    var tutorials3 = ViewBag.Tutorialss;
+}
+
+<h1>@ViewData["title"]</h1>
+
+<h1>@ViewData["title2"]</h1>
+<h1>@ViewData["fname"]</h1>
+<h1>@ViewBag.lname</h1>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    @foreach (var tutorial in tutorials)
+    {
+        <tr>
+            <td>@tutorial.Id</td>
+            <td>@tutorial.Name</td>
+            <td>@tutorial.Description</td>
+        </tr>
+    }
+</table>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    @foreach (var tutorial in tutorials3)
+    {
+        <tr>
+            <td>@tutorial.Id</td>
+            <td>@tutorial.Name</td>
+            <td>@tutorial.Description</td>
+        </tr>
+    }
+</table>  

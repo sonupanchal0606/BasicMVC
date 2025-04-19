@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model BasicMVC.ViewModels.TutorialViewModel
+
+<h1>@Model.title_tv</h1>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>@Model.tutorial.Id</td>
+        <td>@Model.tutorial.Name</td>
+        <td>@Model.tutorial.Description</td>
+    </tr>
+    
+</table>
