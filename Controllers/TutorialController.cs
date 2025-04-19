@@ -39,7 +39,7 @@ namespace BasicMVC.Controllers
             ViewBag.fname = "Sonu";
             ViewData["lname"] = "Panchal";
 
-            return View();
+            return View(); // return the view
         }
 
         // 4) using view model
